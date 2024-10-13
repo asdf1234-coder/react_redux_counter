@@ -6,8 +6,78 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.pointer{
+  cursor: pointer;
+}
+.user-select {
+  user-select: none;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #243642;
+}
+.input {
+  display: flex;
+  width: 100px;
+  height: 15px;
+  background-color:  #629584;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: #E2F1E7;
+  padding: 5px;
+}
+.input::selection{
+  color: #E2F1E7;
+  background-color: #387478;
+}
+.btn {
+  width: 122px;
+  height: 15px;
+  background-color: #387478;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 70px;
+  padding: 10px;
+  transition: 0.3s all ease;
+  color: #E2F1E7;
+}
+.counter {
+  font-size: 100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  margin-right: 70px;
+  margin-left: 70px;
+  color: #E2F1E7;
+}
+.toplanma {
+  display: flex;
+}
+.dik {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px
+}
+.btn-custom {
+  width: 150px;
+  margin-top: 10px;
+}
+.inputeksi {
+  margin-left: 100px
+}
+.inputartı {
+  margin-left: 100px
+}
+.dik1 {
+  margin-top: 103px;
+}
+.btn:hover{
+  background-color: #3874788e
 }
