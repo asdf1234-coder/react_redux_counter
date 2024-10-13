@@ -20,8 +20,8 @@ function App() {
     dispatch(decreaseCustom(Number(customValue)));
   }
   const formatNumber = (num) => {
-    const isNegative = num < 0; // Sayının negatif olup olmadığını kontrol et
-    const absoluteNum = Math.abs(num); // Negatif işareti kaldırarak sayının mutlak değerini al
+    const isNegative = num < 0;
+    const absoluteNum = Math.abs(num);
   
     let formattedNumber;
   
@@ -29,9 +29,8 @@ function App() {
     else if (absoluteNum >= 1e12) formattedNumber = (absoluteNum / 1e12).toFixed(1) + ' trilyon';
     else if (absoluteNum >= 1e9) formattedNumber = (absoluteNum / 1e9).toFixed(1) + ' milyar';
     else if (absoluteNum >= 1e6) formattedNumber = (absoluteNum / 1e6).toFixed(1) + ' milyon';
-    else formattedNumber = absoluteNum.toString(); // 1 milyonun altında ise sayıyı olduğu gibi döndür
-  
-    // Negatif işareti ekle
+    else formattedNumber = absoluteNum.toString();
+
     return isNegative ? `-${formattedNumber}` : formattedNumber;
   };
   return (
