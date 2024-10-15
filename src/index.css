@@ -211,7 +211,7 @@ li hr {
 @media(max-width: 500px){
   .toplanma{
     flex-direction: column;
-    margin-left: 18px;
+    margin-left: 13px;
   }
   .counter_container{
     margin-top: 10px;
@@ -224,7 +224,7 @@ li hr {
     margin-left: 14px;
   }
   .counter{
-    margin-left: 60px;
+    margin-left: 40px;
   }
   .store{
     margin: 0;
