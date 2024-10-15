@@ -1,6 +1,6 @@
 import './index.css';
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Store1 from './components/store1'
 import Store2 from './components/store2'
@@ -24,7 +24,6 @@ function App() {
     return isNegative ? `-${formattedNumber}` : formattedNumber;
   };
   const handleIncrease = () => {
-    toast.dismiss();
     dispatch(increase());
   };
   return (

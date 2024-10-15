@@ -1,8 +1,9 @@
 import React from 'react'
 import '../index.css'
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+//import { ToastContainer, toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+//import 'react-toastify/dist/ReactToastify.css';
 import { increaseArtisSayisiCustom } from "../redux/features/counter/counterSlice";
 
 const Store1 = () => {
@@ -10,27 +11,18 @@ const Store1 = () => {
   const { counter } = useSelector(state => state.counter);
 
   const notify = (iktar) => {
-    toast.dismiss();
-    toast(`Yetersiz para. Gereken para: ${iktar - counter}`, {
-      style: {
-        backgroundColor: '#387478',
-        color: '#E2F1E7',
-        width: '100%',
-        height: '100%',
-        zIndex: '111100000000000',
-        userSelect: 'none',
-      },
-      progressStyle: {
-        visibility: 'hidden',
-        height: '0px',
-      },
-      autoClose: 2500,
+    Swal.fire({
+      title: 'Yetersiz para!',
+      text: `Gereken para: ${iktar - counter}`,
+      icon: 'warning',
+      confirmButtonText: 'Tamam',
+      background: '#387478',
+      color: '#E2F1E7',
     });
-  }
+  };
 
   return (
     <div className='store1 store'>
-        <ToastContainer />
         <ul>
             <li className='li' onClick = {() => { counter >= 50? dispatch(increaseArtisSayisiCustom({ price: 50, artis: 1 })) : notify(50)}} style={{ backgroundColor: counter >= 50 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
