@@ -39,12 +39,11 @@ function App() {
   };
   return (
     <div className="App">
-      <span onClick = {() => dispatch(decrease())} className="pointer user-select artır-btn btn"> - </span>
       <div className='toplanma'>
         <div className='dik dik2'>
           <div className='store1 store'>
             <ul>
-              <li className='li' onClick = {() => { counter > 50? dispatch(increaseArtisSayisi1()) : notify(50)}} style={{ backgroundColor: counter >= 50 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 50? dispatch(increaseArtisSayisi1()) : notify(50)}} style={{ backgroundColor: counter >= 50 ? '#43958C' : ''}}>
                 <ToastContainer />
                 <div className='isimcontainer'>
                   <div className='isim'>POOR</div>
@@ -57,7 +56,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 100? dispatch(increaseArtisSayisi2()) : notify(100)}} style={{ backgroundColor: counter >= 100 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 100? dispatch(increaseArtisSayisi2()) : notify(100)}} style={{ backgroundColor: counter >= 100 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>LOW-INCOME</div>
                   <div className='pricecontainer'>
@@ -69,7 +68,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 500? dispatch(increaseArtisSayisi3()) : notify(500)}} style={{ backgroundColor: counter >= 500 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 500? dispatch(increaseArtisSayisi3()) : notify(500)}} style={{ backgroundColor: counter >= 500 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>WORKING CLASS</div>
                   <div className='pricecontainer'>
@@ -81,7 +80,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 2000? dispatch(increaseArtisSayisi4()) : notify(2000)}} style={{ backgroundColor: counter >= 2000 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 2000? dispatch(increaseArtisSayisi4()) : notify(2000)}} style={{ backgroundColor: counter >= 2000 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>BLUE COLLAR</div>
                   <div className='pricecontainer'>
@@ -93,7 +92,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 5000? dispatch(increaseArtisSayisi5()) : notify(5000)}} style={{ backgroundColor: counter >= 5000 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 5000? dispatch(increaseArtisSayisi5()) : notify(5000)}} style={{ backgroundColor: counter >= 5000 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>WHITE COLLAR</div>
                   <div className='pricecontainer'>
@@ -105,7 +104,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 20000? dispatch(increaseArtisSayisi6()) : notify(20000)}} style={{ backgroundColor: counter >= 20000 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 20000? dispatch(increaseArtisSayisi6()) : notify(20000)}} style={{ backgroundColor: counter >= 20000 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>MINIMUM WAGE</div>
                   <div className='pricecontainer'>
@@ -117,7 +116,7 @@ function App() {
               <li>
                 <hr />
               </li>
-              <li className='li' onClick = {() => { counter > 50000? dispatch(increaseArtisSayisi7()) : notify(50000)}} style={{ backgroundColor: counter >= 50000 ? '#43958C' : ''}}>
+              <li className='li' onClick = {() => { counter >= 50000? dispatch(increaseArtisSayisi7()) : notify(50000)}} style={{ backgroundColor: counter >= 50000 ? '#43958C' : ''}}>
                 <div className='isimcontainer'>
                   <div className='isim'>STRUGGLING CLASS</div>
                   <div className='pricecontainer'>
@@ -130,13 +129,15 @@ function App() {
           </div>
         </div>
         <div className='counter_container'>
+          <span onClick = {() => dispatch(decrease())} className="pointer user-select artır-btn btn"> - </span>
           <span className="user-select counter">{formatNumber(counter)}</span>
           <span className="user-select artissayi">Click: {formatNumber(localStorage.getItem('artisSayisi'))}</span>
+          <span onClick = {() => dispatch(increase())} className="pointer user-select btn eksil-btn"> + </span>
         </div>
         <div className='dik dik1'>
             <div className='store2 store'>
               <ul>
-                <li className='li' onClick = {() => { counter > 200000? dispatch(increaseArtisSayisi8()) : notify(200000)}} style={{ backgroundColor: counter >= 200000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 200000? dispatch(increaseArtisSayisi8()) : notify(200000)}} style={{ backgroundColor: counter >= 200000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>LOWER MIDDLE</div>
                     <div className='pricecontainer'>
@@ -148,7 +149,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 500000? dispatch(increaseArtisSayisi9()) : notify(500000)}} style={{ backgroundColor: counter >= 500000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 500000? dispatch(increaseArtisSayisi9()) : notify(500000)}} style={{ backgroundColor: counter >= 500000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>UPPER MIDDLE</div>
                     <div className='pricecontainer'>
@@ -160,7 +161,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 3000000? dispatch(increaseArtisSayisi10()) : notify(3000000)}} style={{ backgroundColor: counter >= 3000000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 3000000? dispatch(increaseArtisSayisi10()) : notify(3000000)}} style={{ backgroundColor: counter >= 3000000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>SMALL BIZ</div>
                     <div className='pricecontainer'>
@@ -172,7 +173,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 10000000? dispatch(increaseArtisSayisi11()) : notify(10000000)}} style={{ backgroundColor: counter >= 10000000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 10000000? dispatch(increaseArtisSayisi11()) : notify(10000000)}} style={{ backgroundColor: counter >= 10000000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>INVESTOR</div>
                     <div className='pricecontainer'>
@@ -184,7 +185,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 50000000? dispatch(increaseArtisSayisi12()) : notify(50000000)}} style={{ backgroundColor: counter >= 50000000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 50000000? dispatch(increaseArtisSayisi12()) : notify(50000000)}} style={{ backgroundColor: counter >= 50000000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>ENTREPRENEUR</div>
                     <div className='pricecontainer'>
@@ -196,7 +197,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 300000000? dispatch(increaseArtisSayisi13()) : notify(300000000)}} style={{ backgroundColor: counter >= 300000000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 300000000? dispatch(increaseArtisSayisi13()) : notify(300000000)}} style={{ backgroundColor: counter >= 300000000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>CORPORATE</div>
                     <div className='pricecontainer'>
@@ -208,7 +209,7 @@ function App() {
                 <li>
                   <hr />
                 </li>
-                <li className='li' onClick = {() => { counter > 1000000000? dispatch(increaseArtisSayisi14()) : notify(1000000000)}} style={{ backgroundColor: counter >= 1000000000 ? '#43958C' : ''}}>
+                <li className='li' onClick = {() => { counter >= 1000000000? dispatch(increaseArtisSayisi14()) : notify(1000000000)}} style={{ backgroundColor: counter >= 1000000000 ? '#43958C' : ''}}>
                   <div className='isimcontainer'>
                     <div className='isim'>ULTRA RICH</div>
                     <div className='pricecontainer'>
@@ -221,7 +222,6 @@ function App() {
             </div>
         </div>
       </div>
-      <span onClick = {() => dispatch(increase())} className="pointer user-select btn eksil-btn"> + </span>
     </div>
   );
 }
